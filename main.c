@@ -29,38 +29,38 @@ void PrepareAndSendPackageInFASCII(USART_TypeDef * USARTx, char*array, int tempe
 {
 	int i = 0;
 	//convert integer to character
-  do
-  {
+	do
+	{
 		array[i++] = 0;
-    array[i++] = (char)( co2Concentration% 10) + '0';
-    co2Concentration /= 10;
-  } while(co2Concentration);
+		array[i++] = (char)( co2Concentration% 10) + '0';
+		co2Concentration /= 10;
+	} while(co2Concentration);
 	
 	array[i++] = 0;
 	array[i++] = ',';
 	
 	do
-  {
+	{
 		array[i++] = 0;
-    array[i++] = (char)( humidity% 10) + '0';
-    humidity /= 10;
-  } while(humidity);
+		array[i++] = (char)( humidity% 10) + '0';
+		humidity /= 10;
+	} while(humidity);
 	
 	array[i++] = 0;
 	array[i++] = ',';	
 	
 	do
-  {
+	{
 		array[i++] = 0;
-    array[i++] = (char)( temperature% 10) + '0';
-    temperature /= 10;
-  } while(temperature);
+		array[i++] = (char)( temperature% 10) + '0';
+		temperature /= 10;
+	} while(temperature);
 	
-  //send data
-  while(i)
-  {
+	//send data
+	while(i)
+	{
 		UsartPutC(USARTx, array[--i]); 
-  }
+	}
 }
 void USART1_IRQHandler (void)
 {
