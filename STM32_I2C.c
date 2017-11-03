@@ -120,11 +120,11 @@ void I2CUnSetPOS()
 }
 void I2CSetAck()
 {
-		I2C1->CR1 |= I2C_CR1_ACK;
+	I2C1->CR1 |= I2C_CR1_ACK;
 }
 void I2CUnSetAck()
 {
-		I2C1->CR1 &= ~I2C_CR1_ACK;
+	I2C1->CR1 &= ~I2C_CR1_ACK;
 }
 ErrorStatus I2CWaitForByte()
 {
