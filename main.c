@@ -214,6 +214,7 @@ void ConfigureBLESlave()
 }
 int main()
 {
+	// Start
 	SystemCoreClockUpdate();
 	
 	//Timer for sending all the data to Bluetooth HM-10 module
