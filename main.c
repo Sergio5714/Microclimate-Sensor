@@ -24,7 +24,7 @@ int CO2Concentration = 0;
 float Humidity = 0;
 float Temperature = 0;
 
-//Prepare Array in "fucking ASCII format" (FASCII)
+//Prepare Array in special ASCII
 void PrepareAndSendPackageInFASCII(USART_TypeDef * USARTx, char*array, int temperature, int humidity, int co2Concentration)
 {
 	int i = 0;
